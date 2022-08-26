@@ -1,57 +1,68 @@
-class empleadoConfianza {
+class Persona {
     nombre;
     apellido;
     edad;
-    pago;
-    
+    Detalles;
 
-    constructor(nombre, apellido, edad, pago) {
+    constructor(nombre, apellido, edad) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
-        this.pago = pago;
-        
+        this._Detalles= Detalles;
+
     }
 
-    get getId() {
-        return this._id;
+    get getDetalles() {
+        return this._Detalles;
     }
 
-    set setId(id) {
-        this._id = id;
+    set setDetalles(Detalles) {
+        this._Detalles = Detalles;
     }
-
-
-
-
 
 }
 
-class empleadoSindicato {
-    nombre;
-    apellido;
-    edad;
-    pago;
+class Empleado {
+    C;
+    S;
     
-
-    constructor(nnombre, apellido, edad, pago ) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-        this.pago = pago;
+    constructor(C, S) {
+        this.C = C;
+        this.S = S;
         
     }
 
-    get getId() {
-        return this._id;
+    get getDetalles() {
+        return this._Detalles;
+    }    
+
+    set setDetalles(Detalles) {
+        this._Detalles = Detalles;
+    }
+    
     }
 
-    set setId(id) {
-        this._id = id;
+class Nomina extends Empleado {
+    
+    constructor(nombre, apellido, edad ) {
+        super (nombre, apellido, edad);
+    }  
+        
     }
 
+    static sueldoS(350, 0.10){
+        return 350-(350*0.10);
+
+    }
+    
+    static sueldosC (500, 0,13){
+        return 500-(500*0.13);
+    }
+    let objetoPersona = new Persona("María", "Carvajal", 33);
+    console.log (objetoPersona.nombre, apellido, edad);
+
+    /*let calcularNomina=();
+console.log (calcularNomina.sueldosS)*/
 
 
 
-
-}
